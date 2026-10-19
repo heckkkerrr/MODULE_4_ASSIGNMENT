@@ -1,0 +1,2 @@
+import java.util.concurrent.*;
+public class ConcurrentCollectionExamples { public static void main(String[] a)throws Exception{ConcurrentHashMap<Integer,String> m=new ConcurrentHashMap<>();Thread t=new Thread(()->{for(int i=0;i<5;i++)m.put(i,"value"+i);});t.start();for(Integer k:m.keySet())System.out.println(k);t.join();System.out.println(m);CopyOnWriteArrayList<Integer> l=new CopyOnWriteArrayList<>(java.util.List.of(1,2));for(Integer i:l){l.add(i+2);if(l.size()>4)break;}System.out.println(l);}}

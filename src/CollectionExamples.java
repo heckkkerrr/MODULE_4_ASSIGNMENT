@@ -1,0 +1,2 @@
+import java.util.*;
+public class CollectionExamples { public static void main(String[] a){List<Integer> list=new ArrayList<>(Arrays.asList(3,1,2));for(int x:list)System.out.println(x);Set<Integer> set=new TreeSet<>(list);System.out.println(set);Map<Integer,String> map=new TreeMap<>();map.put(2,"B");map.put(1,"A");for(Map.Entry<Integer,String> e:map.entrySet())System.out.println(e.getKey()+" "+e.getValue());}}

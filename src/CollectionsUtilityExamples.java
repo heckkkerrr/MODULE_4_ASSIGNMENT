@@ -1,0 +1,2 @@
+import java.util.*;
+public class CollectionsUtilityExamples { public static void main(String[]a){List<Integer>l=new ArrayList<>(Arrays.asList(3,1,2,2));Collections.shuffle(l);Collections.sort(l);System.out.println(l+" index="+Collections.binarySearch(l,2)+" frequency="+Collections.frequency(l,2));List<Integer>u=Collections.unmodifiableList(l);try{u.add(4);}catch(UnsupportedOperationException e){System.out.println("unmodifiable");}}}

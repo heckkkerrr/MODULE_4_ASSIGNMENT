@@ -1,0 +1,2 @@
+import java.util.*;
+public class QueueStackExamples { public static void main(String[] a){Queue<String> q=new LinkedList<>();q.add("First");q.add("Second");System.out.println(q.remove());Stack<Integer>s=new Stack<>();s.push(1);s.push(2);System.out.println(s.peek()+" "+s.pop());Deque<Character>d=new ArrayDeque<>();for(char c:"level".toCharArray())d.add(c);StringBuilder b=new StringBuilder();while(!d.isEmpty())b.append(d.removeFirst());System.out.println(b+" palindrome="+b.toString().equals(b.reverse().toString()));}}

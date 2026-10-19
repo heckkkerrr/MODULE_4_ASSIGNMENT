@@ -1,0 +1,2 @@
+import java.util.*;
+public class AdvancedCollectionExamples { static class MultiMap<K,V>{Map<K,List<V>>m=new HashMap<>();void put(K k,V v){m.computeIfAbsent(k,x->new ArrayList<>()).add(v);}public String toString(){return m.toString();}}public static void main(String[]a){MultiMap<String,Integer>m=new MultiMap<>();m.put("A",1);m.put("A",2);System.out.println(m);Map<Integer,Double>bank=new HashMap<>();bank.put(101,5000.0);System.out.println(bank);}}

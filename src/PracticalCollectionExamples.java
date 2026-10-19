@@ -1,0 +1,2 @@
+import java.util.*;
+public class PracticalCollectionExamples { static class LruCache<K,V> extends LinkedHashMap<K,V>{int cap;LruCache(int c){super(c,.75f,true);cap=c;}protected boolean removeEldestEntry(Map.Entry<K,V>e){return size()>cap;}}public static void main(String[]a){LruCache<Integer,String>c=new LruCache<>(2);c.put(1,"one");c.put(2,"two");c.get(1);c.put(3,"three");System.out.println(c);Map<Character,Integer>freq=new HashMap<>();for(char ch:"banana".toCharArray())freq.put(ch,freq.getOrDefault(ch,0)+1);System.out.println(freq);}}
